@@ -112,7 +112,22 @@ proxies:
   port: 4614
   cipher: chacha20-ietf-poly1305
   password: "HNhUfTIzLhSP"
-
+- name: "[ 移动 ] 香港 · E1 · 03 · 线路2"
+  type: trojan
+  server: v02.gutingting.com
+  port: 30006
+  password: 62554495-1926-4537-b8cf-0ccd9fae6914
+  udp: true
+  sni: v2hgc02.fuqiangren.com
+  skip-cert-verify: true
+- name: "[ 移动 ] 香港 · E1 · 04 · 线路2"
+  type: trojan
+  server: v02.gutingting.com
+  port: 30038
+  password: 62554495-1926-4537-b8cf-0ccd9fae6914
+  udp: true
+  sni: v2hgc02.fuqiangren.com
+  skip-cert-verify: true
 
 # 代理组策略
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
@@ -126,7 +141,8 @@ proxy-groups:
     - "us"
     - "sg"
     - "bwg"
-
+    - "[ 移动 ] 香港 · E1 · 03 · 线路2"
+    - "[ 移动 ] 香港 · E1 · 04 · 线路2"
   url: 'http://www.gstatic.com/generate_204'
   interval: 300
 
