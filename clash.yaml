@@ -112,12 +112,12 @@ proxies:
   cipher: aes-256-gcm
   password: "xan5NM3rRzpoj2vC"
   
-- name: "sg1"
+- name: "kr"
   type: ss
-  server: 129.150.59.152
-  port: 1398
-  cipher: chacha20-ietf-poly1305
-  password: "Hcqzp4vnctGTsGJ9tB5yfk"
+  server: 158.180.93.53
+  port: 43301
+  cipher: aes-256-gcm
+  password: "AHkl3464"
 
 # - name: "wg"
 #   type: wireguard
