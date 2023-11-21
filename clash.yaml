@@ -145,7 +145,7 @@ proxy-groups:
     - "us"
     - "sg"
     - "bwg"
-    - "sg1"
+    - "kr"
   url: 'http://www.gstatic.com/generate_204'
   interval: 300
 
@@ -179,7 +179,7 @@ proxy-groups:
     - "us"
     - "sg"
     - "bwg"
-    - "sg1"
+    - "kr"
 
 rule-providers:
   reject:
