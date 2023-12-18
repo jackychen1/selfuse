@@ -112,12 +112,13 @@ proxies:
   cipher: aes-256-gcm
   password: "xan5NM3rRzpoj2vC"
   
-- name: "kr"
-  type: ss
-  server: 158.180.93.53
-  port: 43301
-  cipher: aes-256-gcm
-  password: "AHkl3464"
+- name: vmess
+  type: vmess
+  server: c60s3.jjcruises.com
+  port: "12087"
+  uuid: 84755092-4161-47ec-839c-61f5b7989fba
+  alterId: "0"
+  cipher: auto
 
 # - name: "wg"
 #   type: wireguard
@@ -145,7 +146,7 @@ proxy-groups:
     - "us"
     - "sg"
     - "bwg"
-    - "kr"
+    - "vmess"
   url: 'http://www.gstatic.com/generate_204'
   interval: 300
 
@@ -179,7 +180,7 @@ proxy-groups:
     - "us"
     - "sg"
     - "bwg"
-    - "kr"
+    - "vmess"
 
 rule-providers:
   reject:
