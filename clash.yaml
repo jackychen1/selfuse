@@ -95,7 +95,12 @@ proxies:
   port: 30129
   cipher: chacha20-ietf-poly1305
   password: "B0CRFqIw2J7V"
-
+- name: "sg-ai-netflix"
+  type: ss
+  server: 168.138.174.218
+  port: 43301
+  cipher: aes-256-gcm
+  password: "AHkl3464"
 # Shadowsocks
 - name: "us"
   type: ss
@@ -145,6 +150,7 @@ proxy-groups:
   proxies:
     - "us"
     - "sg"
+    - "sg-ai-netflix"
     - "bwg"
     - "vmess"
   url: 'http://www.gstatic.com/generate_204'
@@ -179,6 +185,7 @@ proxy-groups:
     - "自动选择快速节点"
     - "us"
     - "sg"
+    - "sg-ai-netflix"
     - "bwg"
     - "vmess"
 #    - "wg"
