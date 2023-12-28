@@ -288,6 +288,20 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
     path: ./ruleset/tld-not-cn.yaml
     interval: 86400
+
+  netflix:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/snapei/clash-pro-rules/release/netflix.txt"
+    path: ./ruleset/netflix.yaml
+    interval: 86400
+    
+  netflixcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/snapei/clash-pro-rules/release/netflixcidr.txt"
+    path: ./ruleset/netflixcidr.yaml
+    interval: 86400
   
 rules:
   - PROCESS-NAME,FTNN.exe, DIRECT
@@ -298,7 +312,8 @@ rules:
   
   - DOMAIN,oaistatic.com,PROXY
   - DOMAIN,oaiusercontent.com,PROXY
-  
+  - RULE-SET,netflix,AI-Netflix
+  - RULE-SET,netflixcidr,AI-Netflix,no-resolve
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
   - RULE-SET,icloud,DIRECT
