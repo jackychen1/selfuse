@@ -188,7 +188,17 @@ proxy-groups:
     - "sg-ai-netflix"
     - "bwg"
     - "vmess"
-#    - "wg"
+
+- name: "AI-Netflix"
+  type: select
+  proxies:
+    - "自动选择快速节点"
+    - "us"
+    - "sg"
+    - "sg-ai-netflix"
+    - "bwg"
+    - "vmess"
+
 
 rule-providers:
   reject:
@@ -202,6 +212,12 @@ rule-providers:
     behavior: classical
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
     path: ./ruleset/applications.yaml
+    interval: 86400
+  openai:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"
+    path: ./ruleset/openai.yaml
     interval: 86400
   proxy:
     type: http
@@ -275,7 +291,7 @@ rule-providers:
   
 rules:
   - PROCESS-NAME,FTNN.exe, DIRECT
-  
+  - RULE-SET,openai,AI-Netflix
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
