@@ -198,7 +198,14 @@ proxy-groups:
     - "sg-ai-netflix"
     - "bwg"
     - "vmess"
-
+- name: "PT"
+  type: select
+  proxies:
+    - "us"
+    - "sg"
+    - "sg-ai-netflix"
+    - "DIRECT"
+    - "vmess"
 
 rule-providers:
   reject:
@@ -305,6 +312,7 @@ rule-providers:
   
 rules:
   - PROCESS-NAME,FTNN.exe, DIRECT
+  - PROCESS-NAME,uTorrent.exe, PT
   - RULE-SET,openai,AI-Netflix
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
