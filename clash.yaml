@@ -201,11 +201,11 @@ proxy-groups:
 - name: "PT"
   type: select
   proxies:
-    - "us"
-    - "sg"
-    - "sg-ai-netflix"
-    - "DIRECT"
-    - "vmess"
+    - us
+    - sg
+    - sg-ai-netflix
+    - DIRECT
+    - REJECT
 
 rule-providers:
   reject:
