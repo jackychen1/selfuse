@@ -95,6 +95,12 @@ proxies:
   port: 30129
   cipher: chacha20-ietf-poly1305
   password: "B0CRFqIw2J7V"
+- name: "sgipv6"
+  type: ss
+  server: 2603:c024:450f:cc77:537:6ddf:dd0c:836b
+  port: 43301
+  cipher: aes-256-gcm
+  password: "AHkl3464"  
 - name: "sg-ai-netflix"
   type: ss
   server: 168.138.174.218
@@ -150,6 +156,7 @@ proxy-groups:
   proxies:
     - "us"
     - "sg"
+    - "sgipv6"
     - "sg-ai-netflix"
     - "bwg"
     - "vmess"
@@ -185,6 +192,7 @@ proxy-groups:
     - "自动选择快速节点"
     - "us"
     - "sg"
+    - "sgipv6"
     - "sg-ai-netflix"
     - "bwg"
     - "vmess"
@@ -195,6 +203,7 @@ proxy-groups:
     - "自动选择快速节点"
     - "us"
     - "sg"
+    - "sgipv6"
     - "sg-ai-netflix"
     - "bwg"
     - "vmess"
@@ -203,6 +212,7 @@ proxy-groups:
   proxies:
     - us
     - sg
+    - sgipv6
     - sg-ai-netflix
     - DIRECT
     - REJECT
